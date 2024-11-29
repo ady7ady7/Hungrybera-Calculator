@@ -1,16 +1,16 @@
 /* Import custom font */
 @font-face {
     font-family: 'Outfit';
-    src: url('./Outfit-Regular.ttf') format('truetype');
+    src: url('./Outfit/static/Outfit-Regular.ttf') format('truetype');
 }
 
 body, html {
     margin: 0;
     padding: 0;
-    min-height: 100%; /* Ensure the full page takes up space */
+    min-height: 100%;
     display: flex;
     flex-direction: column; /* Allow content stacking */
-    justify-content: start;
+    justify-content: center; /* Center content vertically on desktop */
     align-items: center;
     font-family: 'Outfit', Arial, sans-serif;
     background-color: #171717;
@@ -116,11 +116,11 @@ body, html {
 #ramen-slider {
     -webkit-appearance: none;
     appearance: none;
-    width: 100%; /* Full width for better usability on mobile */
-    height: 2.5vh; /* Set height for the track */
-    background: #333; /* Dark background for the slider track */
+    width: 90%; /* Full width for better usability on mobile */
+    height: 4vh;
+    background: #333;
     border: none;
-    border-radius: 1.25vh; /* Rounded corners for retro feel */
+    border-radius: 1vh;
     box-shadow: 0 0 1vh #000;
     outline: none;
     cursor: pointer;
@@ -130,20 +130,18 @@ body, html {
 #ramen-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 2.5vh; /* Match thumb width to height of track */
-    height: 2.5vh; /* Match thumb height to height of track for alignment */
-    background: #d8382b; /* Bright color for thumb */
-    border: 0.2vh solid #333; /* Dark border for retro look */
-    border-radius: 50%; /* Make the thumb circular */
+    width: 4vh;
+    height: 4vh;
+    background: #d8382b;
+    border: 0.2vh solid #333;
+    border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 0 0.3vh #000;
-    position: relative;
-    top: 0; /* Ensure no vertical offset */
 }
 
 #ramen-slider::-moz-range-thumb {
-    width: 2.5vh;
-    height: 2.5vh;
+    width: 4vh;
+    height: 4vh;
     background: #d8382b;
     border: 0.2vh solid #333;
     border-radius: 50%;
@@ -154,18 +152,18 @@ body, html {
 /* Slider Track Styling */
 #ramen-slider::-webkit-slider-runnable-track {
     width: 100%;
-    height: 2.5vh; /* Match track height to thumb height */
+    height: 3vh;
     background: #333;
-    border-radius: 1.25vh; /* Rounded corners */
+    border-radius: 1vh;
     box-shadow: 0 0 1vh #000;
 }
 
 /* Slider Track for Firefox */
 #ramen-slider::-moz-range-track {
     width: 100%;
-    height: 2.5vh;
+    height: 3vh;
     background: #333;
-    border-radius: 1.25vh;
+    border-radius: 1vh;
     box-shadow: 0 0 1vh #000;
 }
 
@@ -250,5 +248,12 @@ body, html {
 
     .half {
         width: 100%;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+    body, html {
+        justify-content: center; /* Center content vertically on larger screens */
     }
 }

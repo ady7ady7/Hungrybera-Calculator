@@ -195,3 +195,59 @@ body, html {
 .social-icon i {
     font-size: 3vh; /* Icon size to match the text and keep it prominent */
 }
+
+
+
+
+/* General Mobile Styles */
+@media (max-width: 768px) {
+    .container,
+    .header-content,
+    .social-links {
+        width: 90%; /* Reduce width for mobile devices to create better spacing */
+    }
+
+    .text-content {
+        width: 95%; /* Expand text content width to utilize space better on mobile */
+        gap: 5px; /* Reduce gap to make everything closer together */
+    }
+
+    .label-box,
+    .value-box {
+        height: 50px; /* Slightly reduce height to make everything fit better on mobile */
+        font-size: 1rem; /* Smaller font size for better readability */
+    }
+
+    .title {
+        font-size: 4vh; /* Make the title slightly larger on mobile devices for emphasis */
+    }
+
+    .description {
+        font-size: 2.5vh; /* Slightly increase description size */
+    }
+
+    #ramen-slider {
+        width: 90%; /* Make the slider wider for better usability on mobile */
+        height: 3vh; /* Increase slider height to make it more touch-friendly */
+    }
+
+    .social-icon {
+        font-size: 2vh; /* Adjust icon text size */
+    }
+
+    .social-icon i {
+        font-size: 3vh; /* Adjust icon size */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: center; /* Center align for consistency */
+    }
+
+    .half {
+        width: 100%; /* Full width for each half when stacked vertically */
+    }
+}

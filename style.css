@@ -1,0 +1,197 @@
+/* Import custom font */
+@font-face {
+    font-family: 'Outfit';
+    src: url('./Outfit/static/Outfit-Regular.ttf') format('truetype');
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* Allow content stacking */
+    justify-content: center;
+    align-items: center;
+    font-family: 'Outfit', Arial, sans-serif; /* Use imported custom font */
+    background-color: #171717;
+}
+
+/* Header Content Styling */
+.header-content {
+    width: 75%; /* Same width as the container below */
+    max-width: 1200px; /* Consistent max-width as the container */
+    text-align: center; /* Center the text */
+    margin-bottom: 2vh; /* Space between header and container */
+    color: #EADED1; /* Light color to contrast with the dark background */
+}
+
+.title {
+    font-size: 3vh; /* Responsive font size based on viewport height */
+    margin: 0.5vh 0; /* Small vertical margin */
+}
+
+.description {
+    font-size: 2vh; /* Responsive font size for the description */
+    margin: 0.5vh 0; /* Small vertical margin */
+}
+
+.container {
+    display: flex;
+    width: 75%;
+    max-width: 1200px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.half {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-half {
+    width: 50%;
+}
+
+.image-half img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.text-half {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #EADED1;
+    padding: 0; /* No padding to keep symmetrical size */
+}
+
+.text-content {
+    width: 80%; /* Reduced width to bring the elements closer horizontally */
+    height: 90%; /* Slight reduction to center the content vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px; /* Small gap between elements */
+    box-sizing: border-box;
+}
+
+.box {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px; /* Space between the label and value boxes */
+}
+
+.label-box,
+.value-box {
+    flex: 1; /* Each box takes up equal width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px; /* Fixed height for consistency */
+    font-size: 1.2rem;
+    background-color: #FFFFFF;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.value-box {
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+
+#ramen-slider {
+    -webkit-appearance: none; /* Remove default appearance */
+    width: 80%;
+    height: 2.5vh; /* Height relative to viewport height for slider track */
+    background: #333; /* Dark background for slider track */
+    border: 0.3vh solid #444; /* Thick border for retro effect */
+    border-radius: 2vh; /* Rounded corners for retro feel */
+    box-shadow: 0 0 0.5vh #000; /* Shadow for depth */
+    outline: none;
+    cursor: pointer;
+}
+
+#ramen-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove default thumb */
+    appearance: none;
+    width: 2.5vh; /* Match thumb width to track height for perfect fit */
+    height: 2.5vh; /* Match thumb height to track height */
+    background: #d8382b; /* Bright color for thumb (retro-inspired) */
+    border: 0.3vh solid #333; /* Dark border for retro look */
+    border-radius: 50%; /* Make the thumb circular */
+    cursor: pointer;
+    box-shadow: 0 0 0.3vh #000; /* Slight shadow to add depth */
+}
+
+#ramen-slider::-moz-range-thumb {
+    width: 2.5vh;
+    height: 2.5vh;
+    background: #f0a500;
+    border: 0.3vh solid #333;
+    border-radius: 50%; /* Make the thumb circular */
+    cursor: pointer;
+    box-shadow: 0 0 0.3vh #000; /* Slight shadow to add depth */
+}
+
+/* Slider Track Styling */
+#ramen-slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2.5vh; /* Match track height to thumb height */
+    background: #333; /* Dark track background for retro feel */
+    border: 0.3vh solid #444; /* Thick border to give it retro appearance */
+    border-radius: 2vh; /* Rounded corners */
+    box-shadow: 0 0 0.5vh #000;
+}
+
+/* Slider Track for Firefox */
+#ramen-slider::-moz-range-track {
+    width: 100%;
+    height: 2.5vh;
+    background: #333;
+    border: 0.3vh solid #444;
+    border-radius: 2vh;
+    box-shadow: 0 0 0.5vh #000;
+}
+
+
+
+/* Social Links Styling */
+.social-links {
+    width: 75%; /* Same width as the container above */
+    max-width: 1200px; /* Consistent max-width */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3vh; /* Space between container and social links */
+    color: #EADED1;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    font-size: 2.5vh; /* Responsive font size */
+}
+
+.social-icon a {
+    text-decoration: none;
+    color: #EADED1;
+    display: flex;
+    align-items: center;
+    gap: 0.5em; /* Space between icon and text */
+}
+
+.social-icon i {
+    font-size: 3vh; /* Icon size to match the text and keep it prominent */
+}

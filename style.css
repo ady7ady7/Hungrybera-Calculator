@@ -112,13 +112,13 @@ body, html {
 }
 
 #ramen-slider {
-    -webkit-appearance: none;
+    -webkit-appearance: none; /* Remove default appearance */
     appearance: none;
-    width: 90%; 
-    height: 4vh;
-    background: #333;
+    width: 90%; /* Full width for better usability on mobile */
+    height: 2.5vh; /* Set the height for the track */
+    background: #333; /* Dark background for the slider track */
     border: none;
-    border-radius: 1vh;
+    border-radius: 1.25vh; /* Rounded corners for retro feel */
     box-shadow: 0 0 1vh #000;
     outline: none;
     cursor: pointer;
@@ -126,20 +126,22 @@ body, html {
 }
 
 #ramen-slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
+    -webkit-appearance: none; /* Remove default thumb */
     appearance: none;
-    width: 4vh;
-    height: 4vh;
-    background: #d8382b;
-    border: 0.2vh solid #333;
-    border-radius: 50%;
+    width: 2.5vh; /* Match thumb width to track height */
+    height: 2.5vh; /* Match thumb height to track height */
+    background: #d8382b; /* Bright color for thumb */
+    border: 0.2vh solid #333; /* Dark border for retro look */
+    border-radius: 50%; /* Make the thumb circular */
     cursor: pointer;
     box-shadow: 0 0 0.3vh #000;
+    position: relative;
+    top: 0; /* Ensure no vertical offset */
 }
 
 #ramen-slider::-moz-range-thumb {
-    width: 4vh;
-    height: 4vh;
+    width: 2.5vh;
+    height: 2.5vh;
     background: #d8382b;
     border: 0.2vh solid #333;
     border-radius: 50%;
@@ -147,24 +149,23 @@ body, html {
     box-shadow: 0 0 0.3vh #000;
 }
 
-
+/* Slider Track Styling */
 #ramen-slider::-webkit-slider-runnable-track {
     width: 100%;
-    height: 3vh;
+    height: 2.5vh; /* Match track height to thumb height */
     background: #333;
-    border-radius: 1vh;
+    border-radius: 1.25vh; /* Rounded corners for retro look */
     box-shadow: 0 0 1vh #000;
 }
 
-
+/* Slider Track for Firefox */
 #ramen-slider::-moz-range-track {
     width: 100%;
-    height: 3vh;
+    height: 2.5vh;
     background: #333;
-    border-radius: 1vh;
+    border-radius: 1.25vh;
     box-shadow: 0 0 1vh #000;
 }
-
 
 .social-links {
     width: 75%;

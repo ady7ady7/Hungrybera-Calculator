@@ -1,7 +1,7 @@
 /* Import custom font */
 @font-face {
     font-family: 'Outfit';
-    src: url('./Outfit-Regular.ttf') format('truetype');
+    src: url('./Outfit/static/Outfit-Regular.ttf') format('truetype');
 }
 
 body, html {
@@ -18,21 +18,21 @@ body, html {
 
 /* Header Content Styling */
 .header-content {
-    width: 75%; /* Same width as the container below */
-    max-width: 1200px; /* Consistent max-width as the container */
-    text-align: center; /* Center the text */
-    margin-bottom: 2vh; /* Space between header and container */
-    color: #EADED1; /* Light color to contrast with the dark background */
+    width: 75%;
+    max-width: 1200px;
+    text-align: center;
+    margin-bottom: 2vh;
+    color: #EADED1;
 }
 
 .title {
-    font-size: 3vh; /* Responsive font size based on viewport height */
-    margin: 0.5vh 0; /* Small vertical margin */
+    font-size: 3vh;
+    margin: 0.5vh 0;
 }
 
 .description {
-    font-size: 2vh; /* Responsive font size for the description */
-    margin: 0.5vh 0; /* Small vertical margin */
+    font-size: 2vh;
+    margin: 0.5vh 0;
 }
 
 .container {
@@ -43,6 +43,7 @@ body, html {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     overflow: hidden;
+    flex-wrap: wrap; /* Allow the container to adjust properly in smaller viewports */
 }
 
 .half {
@@ -69,17 +70,17 @@ body, html {
     align-items: center;
     flex-direction: column;
     background-color: #EADED1;
-    padding: 0; /* No padding to keep symmetrical size */
+    padding: 0;
 }
 
 .text-content {
-    width: 80%; /* Reduced width to bring the elements closer horizontally */
-    height: 90%; /* Slight reduction to center the content vertically */
+    width: 80%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    gap: 10px; /* Small gap between elements */
+    gap: 10px;
     box-sizing: border-box;
 }
 
@@ -88,16 +89,16 @@ body, html {
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    gap: 10px; /* Space between the label and value boxes */
+    gap: 10px;
 }
 
 .label-box,
 .value-box {
-    flex: 1; /* Each box takes up equal width */
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px; /* Fixed height for consistency */
+    height: 60px;
     font-size: 1.2rem;
     background-color: #FFFFFF;
     border: 1px solid #ccc;
@@ -110,78 +111,75 @@ body, html {
     letter-spacing: 0.05em;
 }
 
-
 #ramen-slider {
-    -webkit-appearance: none; /* Remove default appearance */
-    width: 80%;
-    height: 2.5vh; /* Height relative to viewport height for slider track */
-    background: #333; /* Dark background for slider track */
-    border: 0.3vh solid #444; /* Thick border for retro effect */
-    border-radius: 2vh; /* Rounded corners for retro feel */
-    box-shadow: 0 0 0.5vh #000; /* Shadow for depth */
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%; /* Full width on mobile for better usability */
+    height: 3vh;
+    background: #333;
+    border: none; /* Remove borders for a clean look */
+    border-radius: 1vh;
+    box-shadow: 0 0 1vh #000;
     outline: none;
     cursor: pointer;
+    margin-top: 2vh; /* Margin for better spacing */
 }
 
 #ramen-slider::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Remove default thumb */
+    -webkit-appearance: none;
     appearance: none;
-    width: 2.5vh; /* Match thumb width to track height for perfect fit */
-    height: 2.5vh; /* Match thumb height to track height */
-    background: #d8382b; /* Bright color for thumb (retro-inspired) */
-    border: 0.3vh solid #333; /* Dark border for retro look */
-    border-radius: 50%; /* Make the thumb circular */
+    width: 4vh; /* Increase width to make it more touch-friendly */
+    height: 4vh; /* Make the thumb larger for easier interaction */
+    background: #d8382b;
+    border: 0.2vh solid #333;
+    border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 0 0.3vh #000; /* Slight shadow to add depth */
+    box-shadow: 0 0 0.3vh #000;
 }
 
 #ramen-slider::-moz-range-thumb {
-    width: 2.5vh;
-    height: 2.5vh;
-    background: #f0a500;
-    border: 0.3vh solid #333;
-    border-radius: 50%; /* Make the thumb circular */
+    width: 4vh;
+    height: 4vh;
+    background: #d8382b;
+    border: 0.2vh solid #333;
+    border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 0 0.3vh #000; /* Slight shadow to add depth */
+    box-shadow: 0 0 0.3vh #000;
 }
 
 /* Slider Track Styling */
 #ramen-slider::-webkit-slider-runnable-track {
     width: 100%;
-    height: 2.5vh; /* Match track height to thumb height */
-    background: #333; /* Dark track background for retro feel */
-    border: 0.3vh solid #444; /* Thick border to give it retro appearance */
-    border-radius: 2vh; /* Rounded corners */
-    box-shadow: 0 0 0.5vh #000;
+    height: 3vh;
+    background: #333;
+    border-radius: 1vh;
+    box-shadow: 0 0 1vh #000;
 }
 
 /* Slider Track for Firefox */
 #ramen-slider::-moz-range-track {
     width: 100%;
-    height: 2.5vh;
+    height: 3vh;
     background: #333;
-    border: 0.3vh solid #444;
-    border-radius: 2vh;
-    box-shadow: 0 0 0.5vh #000;
+    border-radius: 1vh;
+    box-shadow: 0 0 1vh #000;
 }
-
-
 
 /* Social Links Styling */
 .social-links {
-    width: 75%; /* Same width as the container above */
-    max-width: 1200px; /* Consistent max-width */
+    width: 75%;
+    max-width: 1200px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 3vh; /* Space between container and social links */
+    margin-top: 3vh;
     color: #EADED1;
 }
 
 .social-icon {
     display: flex;
     align-items: center;
-    font-size: 2.5vh; /* Responsive font size */
+    font-size: 2.5vh;
 }
 
 .social-icon a {
@@ -189,65 +187,62 @@ body, html {
     color: #EADED1;
     display: flex;
     align-items: center;
-    gap: 0.5em; /* Space between icon and text */
+    gap: 0.5em;
 }
 
 .social-icon i {
-    font-size: 3vh; /* Icon size to match the text and keep it prominent */
+    font-size: 3vh;
 }
-
-
-
 
 /* General Mobile Styles */
 @media (max-width: 768px) {
     .container,
     .header-content,
     .social-links {
-        width: 90%; /* Reduce width for mobile devices to create better spacing */
+        width: 90%;
     }
 
     .text-content {
-        width: 95%; /* Expand text content width to utilize space better on mobile */
-        gap: 5px; /* Reduce gap to make everything closer together */
+        width: 95%;
+        gap: 5px;
     }
 
     .label-box,
     .value-box {
-        height: 50px; /* Slightly reduce height to make everything fit better on mobile */
-        font-size: 1rem; /* Smaller font size for better readability */
+        height: 50px;
+        font-size: 1rem;
     }
 
     .title {
-        font-size: 4vh; /* Make the title slightly larger on mobile devices for emphasis */
+        font-size: 4vh;
     }
 
     .description {
-        font-size: 2.5vh; /* Slightly increase description size */
+        font-size: 2.5vh;
     }
 
     #ramen-slider {
-        width: 90%; /* Make the slider wider for better usability on mobile */
-        height: 3vh; /* Increase slider height to make it more touch-friendly */
+        width: 100%; /* Make the slider full width for better usability on mobile */
+        height: 4vh; /* Increase height for easier touch interaction */
     }
 
     .social-icon {
-        font-size: 2vh; /* Adjust icon text size */
+        font-size: 2vh;
     }
 
     .social-icon i {
-        font-size: 3vh; /* Adjust icon size */
+        font-size: 3vh;
     }
 }
-
 
 @media (max-width: 768px) {
     .container {
-        flex-direction: column; /* Stack elements vertically on smaller screens */
-        align-items: center; /* Center align for consistency */
+        flex-direction: column;
+        align-items: center;
     }
 
     .half {
-        width: 100%; /* Full width for each half when stacked vertically */
+        width: 100%;
     }
 }
+

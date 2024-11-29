@@ -1,7 +1,7 @@
 /* Import custom font */
 @font-face {
     font-family: 'Outfit';
-    src: url('./Outfit/static/Outfit-Regular.ttf') format('truetype');
+    src: url('./Outfit-Regular.ttf') format('truetype');
 }
 
 body, html {
